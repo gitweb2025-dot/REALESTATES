@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>STACKLY | Services</title>
+    <meta
+      name="description"
+      content="Discover the comprehensive range of real estate services offered by STACKLY, including property management, real estate consulting, and investment advisory, designed to meet all your real estate needs."
+    />
+    <meta
+      name="keywords"
+      content="real estate, property for sale, property for rent, buy house, sell property, real estate platform, STACKLY"
+    />
+    <meta name="author" content="STACKLY" />
+
+    <meta property="og:title" content="STACKLY | Services" />
+    <meta
+      property="og:description"
+      content="Discover the comprehensive range of real estate services offered by STACKLY, including property management, real estate consulting, and investment advisory, designed to meet all your real estate needs."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="STACKLY" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Marcellus&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- J-QUERY CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- LENIS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.17/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="font-fourthery">
+    <!-- CURSOR -->
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="re-loader" class="re-loader-wrap">
+      <div class="re-loader-inner">
+        <!-- house icon -->
+        <div class="re-house">
+          <svg viewBox="0 0 100 100">
+            <path d="M10 52 L50 18 L90 52" class="roof" />
+            <rect x="22" y="52" width="56" height="30" rx="3" class="body" />
+            <rect x="45" y="62" width="10" height="20" class="door" />
+          </svg>
+        </div>
+
+        <!-- text -->
+        <div class="re-text">
+          <span>S</span>
+          <span>T</span>
+          <span>A</span>
+          <span>C</span>
+          <span>K</span>
+          <span>L</span>
+          <span>Y</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE CONTENT -->
+    <div>
+      <!-- NAVBAR -->
+      <header
+        class="fixed top-0 left-0 right-0 max-w-7xl mx-auto w-full z-40 text-sm"
+      >
+        <!-- DESKTOP NAVBAR -->
+        <nav
+          aria-label="navbar"
+          id="navbar"
+          class="bg-transparent text-black border border-white/10 shadow-inner shadow-white/20 flex items-center justify-between px-6 md:px-12 py-3 md:py-4 m-6 navbar"
+        >
+          <div>
+            <a href="./index.html"
+              ><img src="./src/assets/logo.webp" alt="logo" class="h-8"
+            /></a>
+          </div>
+          <div class="hidden lg:flex items-center gap-8">
+            <!-- HOME DROPDOWN -->
+            <div class="relative">
+              <div class="flex items-center gap-1 font-medium">
+                <a class="nav-hover" href="./index.html" class="font-medium"
+                  ><span data-text="HOME" class="">HOME</span></a
+                >
+
+                <button id="homeToggle" class="">
+                  <svg
+                    id="homeCaret"
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Dropdown -->
+              <div
+                id="homeMenu"
+                class="absolute left-0 mt-3 w-36 rounded-xl bg-white text-black backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden hidden"
+              >
+                <a
+                  href="./home/index.html"
+                  class="home-item block px-6 py-4 text-sm hover:bg-primary/10"
+                  >Home 2</a
+                >
+              </div>
+            </div>
+
+            <a class="nav-hover" href="./about.html"
+              ><span data-text="ABOUT">ABOUT</span></a
+            >
+            <a class="nav-hover text-primary" href="./service.html"
+              ><span data-text="SERVICES">SERVICES</span></a
+            >
+            <a class="nav-hover" href="./project.html"
+              ><span data-text="PROJECTS">PROJECTS</span></a
+            >
+            <a class="nav-hover" href="./contact.html"
+              ><span data-text="CONTACT">CONTACT</span></a
+            >
+            <a class="nav-hover" href="./dashboard.html"
+              ><span data-text="DASHBOARD">DASHBOARD</span></a
+            >
+          </div>
+          <div>
+            <a
+              href="./login.html"
+              class="font-medium hidden lg:flex items-center gap-3 bg-primary text-black px-4 py-2 rounded-full relative group overflow-hidden z-10 hover:text-primary transition-all duration-500 ease-in-out"
+            >
+              <div
+                class="absolute inset-0 z-[-1] w-0 bg-black rounded-full group-hover:w-full group-hover:h-full transition-all duration-500 ease-in-out"
+              ></div>
+              Login
+              <div>
+                <div
+                  class="bg-black text-primary rounded-full w-8 h-8 flex items-center justify-center group-hover:text-black group-hover:bg-primary transition-all duration-500 ease-in-out"
+                >
+                  <i class="fa-regular fa-circle-user"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- HAMBURGER ICON -->
+          <div class="text-2xl cursor-pointer ham-icon block lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <div
+          class="fixed inset-0 w-full h-full bg-white flex flex-col gap-12 justify-center px-12 md:px-20 z-40 transform translate-x-full transition-transform duration-1000 text-xl sm:text-3xl font-bold mobile-menu"
+        >
+          <!-- HOME with sub menu -->
+          <div class="relative">
+            <div class="flex items-center gap-2 menu-link">
+              <a href="./index.html">HOME</a>
+
+              <button id="mobileHomeToggle">
+                <i
+                  id="mobileCaret"
+                  class="fa-solid fa-chevron-down text-lg"
+                ></i>
+              </button>
+            </div>
+
+            <div
+              class="mt-4 hidden absolute bg-white rounded-lg z-40 w-40 px-6 py-6 text-2xl"
+              id="mobileHomeMenu"
+            >
+              <a class="block mobile-home-item mb-3" href="./home/index.html"
+                >Home 2</a
+              >
+            </div>
+          </div>
+
+          <a class="menu-link" href="./about.html">ABOUT</a>
+          <a class="menu-link text-primary" href="./service.html">SERVICES</a>
+          <a class="menu-link" href="./project.html">PROJECTS</a>
+          <a class="menu-link" href="./contact.html">CONTACT</a>
+          <a class="menu-link" href="./dashboard.html">DASHBOARD</a>
+          <a class="menu-link" href="./login.html">LOGIN</a>
+          <button
+            class="close-menu text-2xl cursor-pointer absolute top-10 right-12 p-4 border border-white/20 rounded-full"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- SERVICE -->
+      <main
+        id="service"
+        class="luxury-section mt-10 pt-28 pb-16 overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <!-- LEFT SIDE -->
+            <div class="luxury-left">
+              <p
+                class="luxury-label text-gray-500 mb-6 border-b border-gray-300 inline-block pb-2"
+              >
+                Your Trusted Property Partner
+              </p>
+
+              <h2
+                class="luxury-title text-3xl md:text-4xl xl:text-5xl font-serif leading-tight text-gray-900 mb-10"
+              >
+                Luxury Real <br />
+                Estate Specialists
+              </h2>
+
+              <!-- client trust -->
+              <div class="luxury-trust flex items-center gap-6">
+                <!-- avatars -->
+                <div class="flex -space-x-4">
+                  <img
+                    src="./src/assets/men1.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full border-2 border-white object-cover object-top"
+                  />
+
+                  <img
+                    src="./src/assets/men6.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full border-2 border-white object-cover object-top"
+                  />
+
+                  <img
+                    src="./src/assets/men3.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full border-2 border-white object-cover object-top"
+                  />
+
+                  <img
+                    src="./src/assets/men4.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full border-2 border-white object-cover object-top"
+                  />
+                </div>
+
+                <!-- rating -->
+                <div>
+                  <div class="text-yellow-500 mb-1">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+
+                  <p class="text-gray-600 text-sm">Trusted By 56+ Clients</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="luxury-right">
+              <!-- mission -->
+              <div
+                class="luxury-row grid lg:grid-cols-3 gap-10 items-center pb-10 border-b border-gray-300"
+              >
+                <h4 class="font-semibold tracking-wide">OUR MISSION</h4>
+
+                <p class="text-gray-600 leading-relaxed col-span-2">
+                  To provide discreet and high-value real estate advisory
+                  services that empower clients to make confident decisions in
+                  the luxury property market.
+                </p>
+              </div>
+
+              <!-- vision -->
+              <div
+                class="luxury-row grid lg:grid-cols-3 gap-10 pt-10 items-center"
+              >
+                <h4 class="font-semibold tracking-wide">OUR VISION</h4>
+
+                <p class="text-gray-600 leading-relaxed col-span-2">
+                  To become a globally recognized luxury real estate advisory
+                  known for integrity, refined expertise, and exceptional client
+                  experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- CHOOSE SECTION -->
+      <section
+        class="choose-section max-w-7xl mx-auto px-4 md:px-8 py-28 bg-slate-50 overflow-hidden"
+      >
+        <div class="">
+          <!-- HEADER -->
+          <div
+            class="choose-header grid lg:grid-cols-2 gap-12 items-start mb-16"
+          >
+            <div>
+              <p
+                class="choose-label text-gray-500 border-b border-gray-300 inline-block pb-2 mb-6"
+              >
+                Why Choose Stackly
+              </p>
+
+              <h2
+                class="choose-title text-3xl md:text-4xl xl:text-5xl font-serif leading-tight text-gray-900 max-w-2xl"
+              >
+                Where Expertise Meets Exceptional Properties
+              </h2>
+            </div>
+
+            <p class="choose-intro text-gray-600 leading-relaxed">
+              We deliver more than properties — we offer strategic guidance,
+              market expertise, and a refined approach to luxury real estate.
+            </p>
+          </div>
+
+          <!-- divider -->
+          <div class="choose-divider w-full h-px bg-gray-300 mb-16"></div>
+
+          <!-- CONTENT -->
+          <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <!-- LEFT FEATURES -->
+            <div class="choose-features space-y-10">
+              <!-- item -->
+              <div class="choose-item flex gap-6 pb-8 border-b border-gray-200">
+                <div>
+                  <div
+                    class="choose-number w-12 h-12 rounded-full bg-primary flex items-center justify-center font-semibold text-gray-700"
+                  >
+                    01
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">Proven Expertise</h4>
+                  <p class="text-gray-600 leading-relaxed max-w-md">
+                    Years of experience navigating high-value properties with a
+                    deep understanding of global luxury markets.
+                  </p>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div class="choose-item flex gap-6 pb-8 border-b border-gray-200">
+                <div>
+                  <div
+                    class="choose-number w-12 h-12 rounded-full bg-primary flex items-center justify-center font-semibold text-gray-700"
+                  >
+                    02
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">
+                    Exclusive Portfolio
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed max-w-md">
+                    Access to carefully curated residences that meet the highest
+                    standards of design, location, and investment potential.
+                  </p>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div class="choose-item flex gap-6 pb-8 border-b border-gray-200">
+                <div>
+                  <div
+                    class="choose-number w-12 h-12 rounded-full bg-primary flex items-center justify-center font-semibold text-gray-700"
+                  >
+                    03
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">
+                    Personalized Approach
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed max-w-md">
+                    Every client receives tailored recommendations based on
+                    lifestyle goals, preferences, and long-term vision.
+                  </p>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div class="choose-item flex gap-6">
+                <div>
+                  <div
+                    class="choose-number w-12 h-12 rounded-full bg-primary flex items-center justify-center font-semibold text-gray-700"
+                  >
+                    04
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">Global Network</h4>
+                  <p class="text-gray-600 leading-relaxed max-w-md">
+                    Strong international connections enabling seamless
+                    transactions across prime real estate destinations
+                    worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="choose-right relative h-full">
+              <img
+                src="./src/assets/service.webp"
+                alt="service"
+                class="choose-img w-full h-full object-cover"
+              />
+              
+              <a class="absolute bottom-0 left-0 px-6 py-4 border-8 border-slate-50 bg-primary" href="./404.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE CARDS -->
+      <section
+        class="services-section py-28 max-w-7xl mx-auto px-4 md:px-8 overflow-hidden"
+      >
+        <div class="">
+          <!-- header -->
+          <div
+            class="grid lg:grid-cols-2 gap-20 items-start justify-between mb-16"
+          >
+            <div>
+              <p
+                class="services-label text-gray-500 mb-6 border-b border-gray-300 inline-block pb-2"
+              >
+                What We Offer
+              </p>
+
+              <h2
+                class="services-title text-3xl md:text-4xl xl:text-5xl font-serif leading-tight text-gray-900"
+              >
+                Strategic Services for <br />
+                Luxury Properties
+              </h2>
+            </div>
+
+            <p class="services-intro text-gray-600 max-w-md leading-relaxed">
+              We provide a full range of luxury real estate services designed to
+              support discerning clients at every stage of their property
+              journey — from acquisition to investment growth.
+            </p>
+          </div>
+
+          <!-- cards -->
+          <div class="services-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- CARD 1 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <!-- building svg -->
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 21h18" />
+                  <path d="M5 21V7l7-4 7 4v14" />
+                  <path d="M9 21v-6h6v6" />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">
+                Luxury Property Advisory
+              </h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Strategic guidance tailored to high-value residential and
+                investment properties, delivered with precision and discretion.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="1.5"
+                >
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M8 8h8M8 12h6M8 16h4" />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">Private Property Sales</h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Confidential representation for homeowners seeking to market
+                exclusive properties to qualified buyers.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="8" r="3" />
+                  <path d="M4 21v-1a8 8 0 0116 0v1" />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">Buyer Representation</h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Personalized support for buyers navigating premium property
+                acquisitions with clarity and confidence.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- CARD 4 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 20V10M6 20V4M18 20v-6" />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">
+                Investment Consultation
+              </h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Data-driven insights focused on long-term value, risk
+                management, and portfolio growth opportunities.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- CARD 5 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 7h18M6 7V5h12v2M4 7v12h16V7" />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">Off Market Listings</h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Access exclusive invitation-only properties unavailable through
+                public market channels.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- CARD 6 -->
+            <div
+              class="service-card border border-gray-300 p-10 rounded-tr-4xl"
+            >
+              <div
+                class="service-icon w-14 h-14 rounded-full bg-primary/50 flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#222"
+                  stroke-width="1.5"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                  />
+                </svg>
+              </div>
+
+              <h4 class="text-xl font-semibold mb-3">Analysis & Valuation</h4>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Professional property insights based on market trends,
+                comparable data, and strategic positioning.
+              </p>
+
+              <a
+                href="./404.html"
+                class="service-link inline-flex items-center gap-2 text-sm tracking-wide"
+              >
+                VIEW DETAILS
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="main-footer max-w-7xl bg-slate-50 mx-auto w-full relative pt-24 overflow-hidden text-black"
+      >
+        <!-- GRID BACKGROUND -->
+        <div
+          class="absolute inset-0 opacity-[0.06]"
+          style="background-size: 40px 40px"
+        ></div>
+
+        <div class="relative z-10 px-4 md:px-8">
+          <!-- TOP HEADER -->
+          <div
+            class="footer-header flex flex-col lg:flex-row justify-between items-start gap-12 mb-16"
+          >
+            <div class="footer-title">
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight"
+              >
+                Begin your construction
+                <span class="italic font-light">journey</span><br />
+                with trusted experts
+              </h2>
+            </div>
+
+            <div class="footer-social">
+              <p class="text-gray-500 mb-5">Explore Our Social Media</p>
+
+              <div class="flex gap-4">
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i
+                    class="fa-brands fa-pinterest-p pointer-events-none z-[-1]"
+                  ></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-gray-400 mb-16" />
+
+          <!-- FOOTER GRID -->
+          <div
+            class="footer-columns grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14"
+          >
+            <!-- BRAND -->
+            <div class="footer-col">
+              <div class="flex items-center gap-3 mb-6">
+                <a href="./index.html"
+                  ><img class="h-8" src="./src/assets/logo.webp" alt="logo"
+                /></a>
+              </div>
+
+              <p class="text-gray-800 leading-relaxed">
+                We are trusted builders and developers delivering modern,
+                high-quality residential and commercial construction solutions.
+              </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li><a href="./index.html" class="footer-link">Home</a></li>
+                <li><a href="./about.html" class="footer-link">About Us</a></li>
+                <li>
+                  <a href="./project.html" class="footer-link">Projects</a>
+                </li>
+                <li>
+                  <a href="./service.html" class="footer-link">Services</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="footer-link">Contact Us</a>
+                </li>
+                <li>
+                  <a href="./dashboard.html" class="footer-link">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li>
+                  <a href="./404.html" class="footer-link">Site Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Design & Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Project Management</a
+                  >
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Building Design</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Interior Fit-Out Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Subscribe Newsletter</h4>
+              <p class="text-gray-800 mb-6">
+                Subscribe to receive the latest updates, insights, and project
+                news.
+              </p>
+
+              <form id="foot-form" class="newsletter-box">
+                <div class="relative">
+                  <input
+                    id="foot-email"
+                    type="email"
+                    placeholder="Enter Your E-mail"
+                    class="w-full bg-transparent border border-gray-600 rounded-full py-4 px-6 pr-16 text-black placeholder-gray-700 outline-none"
+                  />
+
+                  <button
+                    class="news-btn absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-black w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+
+                <div class="mt-2">
+                  <p id="footError" class="text-red-500 text-sm hidden"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- COPYRIGHT -->
+          <div
+            class="footer-copy text-center text-gray-800 mt-20 py-6 border-t border-gray-400"
+          >
+            Copyright © 2026 All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+
+      <!-- SCROLL TO TOP -->
+      <button
+        class="scroll-top-btn fixed bottom-5 right-5 z-50 opacity-0 cursor-pointer"
+      >
+        <!-- progress circle -->
+        <svg class="scroll-progress w-15 h-15 -rotate-90">
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="2"
+            class="progress-bg fill-none stroke-gray-200"
+          />
+
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="4"
+            class="progress-ring fill-none stroke-primary"
+          />
+        </svg>
+
+        <!-- arrow -->
+        <div
+          class="scroll-icon absolute inset-0 flex items-center justify-center"
+        >
+          <i class="fa-solid fa-arrow-up text-sm"></i>
+        </div>
+      </button>
+    </div>
+
+    <!-- JS -->
+    <script src="./service.js"></script>
+  </body>
+</html>

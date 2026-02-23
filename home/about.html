@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>STACKLY | About</title>
+    <meta
+      name="description"
+      content="Learn more about STACKLY, our mission, and how we're revolutionizing the real estate industry. Discover what makes us different from other real estate platforms."
+    />
+    <meta
+      name="keywords"
+      content="real estate, property for sale, property for rent, buy house, sell property, real estate platform, STACKLY"
+    />
+    <meta name="author" content="STACKLY" />
+
+    <meta property="og:title" content="STACKLY | About" />
+    <meta
+      property="og:description"
+      content="Learn more about STACKLY, our mission, and how we're revolutionizing the real estate industry. Discover what makes us different from other real estate platforms."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="STACKLY" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Marcellus&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- J-QUERY CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- LENIS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.17/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-gray-100 font-fourthery">
+    <!-- CURSOR -->
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="re-loader" class="re-loader-wrap">
+      <div class="re-loader-inner">
+        <!-- house icon -->
+        <div class="re-house">
+          <svg viewBox="0 0 100 100">
+            <path d="M10 52 L50 18 L90 52" class="roof" />
+            <rect x="22" y="52" width="56" height="30" rx="3" class="body" />
+            <rect x="45" y="62" width="10" height="20" class="door" />
+          </svg>
+        </div>
+
+        <!-- text -->
+        <div class="re-text">
+          <span>S</span>
+          <span>T</span>
+          <span>A</span>
+          <span>C</span>
+          <span>K</span>
+          <span>L</span>
+          <span>Y</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE CONTENT -->
+    <div>
+      <!-- NAVBAR -->
+      <header
+        class="fixed top-0 left-0 right-0 max-w-7xl mx-auto w-full z-40 text-sm"
+      >
+        <!-- DESKTOP NAVBAR -->
+        <nav
+          aria-label="navbar"
+          id="navbar"
+          class="bg-white text-black border border-white/10 shadow-inner shadow-white/20 flex items-center justify-between px-6 md:px-12 py-3 md:py-4 m-6 navbar"
+        >
+          <div>
+            <a href="./index.html"
+              ><img src="../src/assets/logo.webp" alt="logo" class="h-8"
+            /></a>
+          </div>
+          <div class="hidden lg:flex items-center gap-8">
+            <!-- HOME DROPDOWN -->
+            <div class="relative">
+              <div class="flex items-center gap-1 font-medium">
+                <a class="nav-hover" href="./index.html" class="font-medium"
+                  ><span data-text="HOME" class="">HOME</span></a
+                >
+
+                <button id="homeToggle" class="">
+                  <svg
+                    id="homeCaret"
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Dropdown -->
+              <div
+                id="homeMenu"
+                class="absolute left-0 mt-3 w-36 rounded-xl bg-white text-black backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden hidden"
+              >
+                <a
+                  href="../index.html"
+                  class="home-item block px-6 py-4 text-sm hover:bg-primary/10"
+                  >Home 1</a
+                >
+              </div>
+            </div>
+
+            <a class="nav-hover text-primary" href="./about.html"
+              ><span data-text="ABOUT">ABOUT</span></a
+            >
+            <a class="nav-hover" href="./service.html"
+              ><span data-text="SERVICES">SERVICES</span></a
+            >
+            <a class="nav-hover" href="./project.html"
+              ><span data-text="PROJECTS">PROJECTS</span></a
+            >
+            <a class="nav-hover" href="./contact.html"
+              ><span data-text="CONTACT">CONTACT</span></a
+            >
+            <a class="nav-hover" href="./dashboard.html"
+              ><span data-text="DASHBOARD">DASHBOARD</span></a
+            >
+          </div>
+          <div>
+            <a
+              href="./login.html"
+              class="font-medium hidden lg:flex items-center gap-3 bg-primary text-black px-4 py-2 rounded-full relative group overflow-hidden z-10 hover:text-primary transition-all duration-500 ease-in-out"
+            >
+              <div
+                class="absolute inset-0 z-[-1] w-0 bg-black rounded-full group-hover:w-full group-hover:h-full transition-all duration-500 ease-in-out"
+              ></div>
+              Login
+              <div>
+                <div
+                  class="bg-black text-primary rounded-full w-8 h-8 flex items-center justify-center group-hover:text-black group-hover:bg-primary transition-all duration-500 ease-in-out"
+                >
+                  <i class="fa-regular fa-circle-user"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- HAMBURGER ICON -->
+          <div class="text-2xl cursor-pointer ham-icon block lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <div
+          class="fixed inset-0 w-full h-full bg-white flex flex-col gap-12 justify-center px-12 md:px-20 z-40 transform translate-x-full transition-transform duration-1000 text-xl sm:text-3xl font-bold mobile-menu"
+        >
+          <!-- HOME with sub menu -->
+          <div class="relative">
+            <div class="flex items-center gap-2 menu-link">
+              <a href="./index.html">HOME</a>
+
+              <button id="mobileHomeToggle">
+                <i
+                  id="mobileCaret"
+                  class="fa-solid fa-chevron-down text-lg"
+                ></i>
+              </button>
+            </div>
+
+            <div
+              class="mt-4 hidden absolute bg-white rounded-lg z-40 w-40 px-6 py-6 text-2xl"
+              id="mobileHomeMenu"
+            >
+              <a class="block mobile-home-item mb-3" href="../index.html"
+                >Home 1</a
+              >
+            </div>
+          </div>
+
+          <a class="menu-link text-primary" href="./about.html">ABOUT</a>
+          <a class="menu-link" href="./service.html">SERVICES</a>
+          <a class="menu-link" href="./project.html">PROJECTS</a>
+          <a class="menu-link" href="./contact.html">CONTACT</a>
+          <a class="menu-link" href="./dashboard.html">DASHBOARD</a>
+          <a class="menu-link" href="./login.html">LOGIN</a>
+          <button
+            class="close-menu text-2xl cursor-pointer absolute top-10 right-12 p-4 border border-white/20 rounded-full"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <main
+        id="about"
+        class="about-section mt-32 max-w-7xl mx-auto px-4 md:px-8 py-16 bg-white rounded-3xl overflow-hidden"
+      >
+        <div class="">
+          <!-- TOP GRID -->
+          <div class="grid lg:grid-cols-2 gap-16 items-start mb-20">
+            <!-- LEFT CONTENT -->
+            <div class="about-left">
+              <p class="about-label text-sm tracking-widest mb-6 text-primary">
+                REAL ESTATE COMPANY
+              </p>
+
+              <h1
+                class="about-title text-3xl md:text-4xl xl:text-5xl font-semibold leading-none mb-8"
+              >
+                About Us
+              </h1>
+
+              <p class="about-desc text-gray-500 max-w-lg mb-10">
+                We are a real estate company specializing in property sales,
+                rentals, and management with the highest professional standards.
+              </p>
+
+              <button
+                class="about-breadcrumb border border-gray-300 text-gray-600 px-6 py-4 flex items-center gap-3"
+              >
+                Home
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="text-primary"> About Us</span>
+              </button>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-right">
+              <img
+                src="../src/assets/hp1.webp"
+                alt="about"
+                class="about-img w-full h-55 object-cover mb-8"
+              />
+
+              <h3 class="about-subtitle text-2xl font-semibold mb-4">
+                The Right Property Investment for Your Future
+              </h3>
+
+              <p class="text-gray-500 max-w-md about-para">
+                We believe that every property is not just a building, but a
+                place to grow.
+              </p>
+            </div>
+          </div>
+
+          <!--  STATS BAR  -->
+          <div
+            class="about-stats grid md:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-10 bg-gray-50 rounded-2xl p-12"
+          >
+            <div
+              class="flex items-center justify-center text-xl font-semibold text-center lg:order-last"
+            >
+              The Right Property Investment for Your Future
+            </div>
+
+            <div class="text-center">
+              <h3
+                class="about-counter text-5xl font-semibold"
+                data-target="1200"
+              >
+                1200 <span>+</span>
+              </h3>
+              <p class="text-gray-500 mt-2">Properties Sold</p>
+            </div>
+
+            <div class="text-center">
+              <h3
+                class="about-counter text-5xl font-semibold"
+                data-target="950"
+              >
+                950 <span>+</span>
+              </h3>
+              <p class="text-gray-500 mt-2">Happy Clients</p>
+            </div>
+
+            <div class="text-center">
+              <h3 class="about-counter text-5xl font-semibold" data-target="98">
+                98 <span>%</span>
+              </h3>
+              <p class="text-gray-500 mt-2">Occupancy Rate</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ACHIEVEMENT -->
+      <section
+        class="achievement-section mt-20 max-w-7xl mx-auto px-4 md:px-8 py-16 bg-white rounded-3xl overflow-hidden"
+      >
+        <div class="">
+          <!-- HEADER -->
+          <div class="text-center mb-20">
+            <p class="ach-label tracking-widest text-sm mb-4 text-primary">
+              COMPANY ACHIEVEMENTS
+            </p>
+
+            <h2
+              class="ach-title text-3xl md:text-4xl xl:text-5xl font-semibold mb-4"
+            >
+              Building Confidence Through Dedication
+            </h2>
+
+            <p class="text-gray-500 max-w-2xl mx-auto">
+              Our track record reflects years of delivering premium residential
+              and commercial properties with unmatched quality, client trust,
+              and long-term value.
+            </p>
+          </div>
+
+          <!-- GRID -->
+          <div class="grid lg:grid-cols-3 gap-16 items-center">
+            <!-- LEFT COLUMN -->
+            <div class="ach-left space-y-10">
+              <div class="achievement-item pb-8 border-b">
+                <div class="flex gap-4 items-start">
+                  <div>
+                    <div
+                      class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded-full"
+                    >
+                      <i class="fa-solid fa-award"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">
+                      Best Real Estate Agency 2022
+                    </h4>
+                    <p class="text-gray-500 text-sm">
+                      Recognized for delivering exceptional residential projects
+                      and maintaining outstanding client satisfaction across
+                      global markets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="achievement-item pb-8 border-b">
+                <div class="flex gap-4 items-start">
+                  <div>
+                    <div
+                      class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded-full"
+                    >
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">
+                      Most Growing Company 2023
+                    </h4>
+                    <p class="text-gray-500 text-sm">
+                      Achieved record-breaking property sales growth driven by
+                      innovation and strategic market expansion.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="achievement-item">
+                <div class="flex gap-4 items-start">
+                  <div>
+                    <div
+                      class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded-full"
+                    >
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">
+                      Innovative Development Award 2023
+                    </h4>
+                    <p class="text-gray-500 text-sm">
+                      Honored for sustainable building designs and modern
+                      architectural excellence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CENTER IMAGE -->
+            <div class="ach-center h-full flex justify-center">
+              <img
+                src="../src/assets/why1.webp"
+                alt="about"
+                class="center-image w-full lg:h-full object-cover rounded-lg"
+              />
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="ach-right space-y-10">
+              <div class="achievement-item pb-8 border-b">
+                <div class="flex gap-4 items-start">
+                  <div>
+                    <div
+                      class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded-full"
+                    >
+                      <i class="fa-solid fa-building"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">
+                      Developers Honor 2024
+                    </h4>
+                    <p class="text-gray-500 text-sm">
+                      Awarded for excellence in luxury residential developments
+                      and high-value investment properties.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="achievement-item pb-8 border-b">
+                <div class="flex gap-4 items-start">
+                  <div>
+                    <div
+                      class="w-10 h-10 bg-gray-100 flex items-center justify-center rounded-full"
+                    >
+                      <i class="fa-solid fa-leaf"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">
+                      Green Building Awards 2025
+                    </h4>
+                    <p class="text-gray-500 text-sm">
+                      Recognized for eco-friendly construction practices and
+                      sustainable communities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="achievement-item bg-gray-50 p-6 rounded">
+                <h4 class="font-semibold mb-2">25+ Years of Excellence</h4>
+                <p class="text-gray-500 text-sm">
+                  Delivering premium real estate solutions with integrity,
+                  innovation, and long-term client partnerships.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAMS -->
+      <section
+        class="team-section py-16 mt-20 max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-[30px] overflow-hidden"
+      >
+        <div class="">
+          <!-- HEADER -->
+          <div
+            class="team-header grid lg:grid-cols-4 gap-10 items-center mb-20"
+          >
+            <div class="lg:col-span-2">
+              <p class="team-label text-primary mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-users"></i> Our Team
+              </p>
+
+              <h2
+                class="team-title text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight"
+              >
+                Meet the Passionate <br />
+                Minds Behind Us.
+              </h2>
+            </div>
+
+            <p class="team-desc text-gray-500 leading-relaxed">
+              Our dedicated team brings creativity, experience, and commitment
+              together to deliver meaningful solutions.
+            </p>
+
+            <div class="team-btn w-fit">
+              <a
+                href="./404.html"
+                class="font-medium flex items-center gap-3 bg-primary text-black px-4 py-3 rounded-full relative group overflow-hidden z-10 hover:text-primary transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="absolute inset-0 z-[-1] w-0 bg-black rounded-full group-hover:w-full group-hover:h-full transition-all duration-500 ease-in-out"
+                ></div>
+                View All Members
+                <div>
+                  <div
+                    class="bg-black text-primary rounded-full w-8 h-8 flex items-center justify-center group-hover:text-black group-hover:bg-primary transition-all duration-500 ease-in-out"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-sm"
+                    ></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- TEAM GRID -->
+          <div class="team-grid grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- CARD -->
+            <div class="team-card bg-gray-100 rounded-3xl p-3 text-center">
+              <div class="relative">
+                <img
+                  src="../src/assets/men5.webp"
+                  alt="profile"
+                  class="team-img w-full h-80 object-top object-cover rounded-3xl"
+                />
+
+                <a
+                  href="./404.html"
+                  class="team-icon absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
+
+              <div class="bg-[#fafafa] rounded-2xl p-6 mt-6">
+                <h4 class="font-semibold text-xl">David Wilson</h4>
+                <p class="text-gray-500 text-sm">Project Manager</p>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="team-card bg-gray-100 rounded-3xl p-3 text-center">
+              <div class="relative">
+                <img
+                  src="../src/assets/men4.webp"
+                  alt="profile"
+                  class="team-img w-full h-80 object-center object-cover rounded-3xl"
+                />
+
+                <a
+                  href="./404.html"
+                  class="team-icon absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
+
+              <div class="bg-[#fafafa] rounded-2xl p-6 mt-6">
+                <h4 class="font-semibold text-xl">Emily Davis</h4>
+                <p class="text-gray-500 text-sm">Lead Architect</p>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="team-card bg-gray-100 rounded-3xl p-3 text-center">
+              <div class="relative">
+                <img
+                  src="../src/assets/men1.webp"
+                  class="team-img w-full h-80 object-cover object-top rounded-3xl"
+                />
+
+                <a
+                  href="./404.html"
+                  class="team-icon absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
+
+              <div class="bg-[#fafafa] rounded-2xl p-6 mt-6">
+                <h4 class="font-semibold text-xl">John Smith</h4>
+                <p class="text-gray-500 text-sm">Senior Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section
+        class="faq-section py-16 my-20 max-w-7xl mx-auto px-4 md:px-8 bg-white rounded-[30px] overflow-hidden"
+      >
+        <div class="">
+          <!--  HEADER  -->
+          <div class="text-center mb-20">
+            <p
+              class="faq-label text-primary mb-4 flex justify-center items-center gap-2"
+            >
+              <i class="fa-solid fa-circle-question"></i> FAQ's
+            </p>
+
+            <h2
+              class="faq-title text-3xl md:text-4xl xl:text-5xl font-semibold mb-6"
+            >
+              Frequently Asked Questions.
+            </h2>
+
+            <p class="faq-desc text-gray-500 max-w-2xl mx-auto">
+              Find clear answers to common questions regarding our real estate
+              services, construction projects, timelines, and design solutions.
+            </p>
+          </div>
+
+          <!-- ===== FAQ GRID ===== -->
+          <div class="grid lg:grid-cols-2 gap-6">
+            <div class="faq-grid flex flex-col gap-6">
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>What services do you provide?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    We provide real estate consulting, property development,
+                    construction, design planning, and investment advisory
+                    services.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>Can I customize my construction project?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    Yes, we offer fully customized design and planning solutions
+                    tailored to your preferences, lifestyle needs, and budget.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>How long does a typical project take?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    Project timelines vary depending on size and complexity,
+                    typically ranging from 3 to 12 months.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>Do you handle permits and approvals?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    We manage all legal documentation, permits, and approvals
+                    required for your construction or property development.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>Are your construction costs fixed or flexible?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    We offer transparent pricing models with flexible options
+                    depending on project requirements.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item bg-gray-100 rounded-2xl overflow-hidden">
+                <button
+                  class="faq-question w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span>Can I request consultation before starting?</span>
+                  <i class="faq-icon fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer px-6">
+                  <p class="text-gray-500 pb-6">
+                    Yes, we provide free initial consultations to understand
+                    your project goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-full rounded-2xl">
+              <img
+                class="object-cover h-full rounded-2xl"
+                src="../src/assets/about1.webp"
+                alt="faq"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="main-footer bg-slate-50 max-w-7xl mx-auto w-full relative pt-24 overflow-hidden text-black"
+      >
+        <!-- GRID BACKGROUND -->
+        <div
+          class="absolute inset-0 opacity-[0.06]"
+          style="background-size: 40px 40px"
+        ></div>
+
+        <div class="relative z-10 px-4 md:px-8">
+          <!-- TOP HEADER -->
+          <div
+            class="footer-header flex flex-col lg:flex-row justify-between items-start gap-12 mb-16"
+          >
+            <div class="footer-title">
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight"
+              >
+                Begin your construction
+                <span class="italic font-light">journey</span><br />
+                with trusted experts
+              </h2>
+            </div>
+
+            <div class="footer-social">
+              <p class="text-gray-500 mb-5">Explore Our Social Media</p>
+
+              <div class="flex gap-4">
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i
+                    class="fa-brands fa-pinterest-p pointer-events-none z-[-1]"
+                  ></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-gray-400 mb-16" />
+
+          <!-- FOOTER GRID -->
+          <div
+            class="footer-columns grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14"
+          >
+            <!-- BRAND -->
+            <div class="footer-col">
+              <div class="flex items-center gap-3 mb-6">
+                <a href="./index.html"
+                  ><img class="h-8" src="../src/assets/logo.webp" alt="logo"
+                /></a>
+              </div>
+
+              <p class="text-gray-800 leading-relaxed">
+                We are trusted builders and developers delivering modern,
+                high-quality residential and commercial construction solutions.
+              </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li><a href="./index.html" class="footer-link">Home</a></li>
+                <li><a href="./about.html" class="footer-link">About Us</a></li>
+                <li>
+                  <a href="./project.html" class="footer-link">Projects</a>
+                </li>
+                <li>
+                  <a href="./service.html" class="footer-link">Services</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="footer-link">Contact Us</a>
+                </li>
+                <li>
+                  <a href="./dashboard.html" class="footer-link">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li>
+                  <a href="./404.html" class="footer-link">Site Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Design & Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Project Management</a
+                  >
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Building Design</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Interior Fit-Out Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Subscribe Newsletter</h4>
+              <p class="text-gray-800 mb-6">
+                Subscribe to receive the latest updates, insights, and project
+                news.
+              </p>
+
+              <form id="foot-form" class="newsletter-box">
+                <div class="relative">
+                  <input
+                    id="foot-email"
+                    type="email"
+                    placeholder="Enter Your E-mail"
+                    class="w-full bg-transparent border border-gray-600 rounded-full py-4 px-6 pr-16 text-black placeholder-gray-700 outline-none"
+                  />
+
+                  <button
+                    class="news-btn absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-black w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+
+                <div class="mt-2">
+                  <p id="footError" class="text-red-500 text-sm hidden"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- COPYRIGHT -->
+          <div
+            class="footer-copy text-center text-gray-800 mt-20 py-6 border-t border-gray-400"
+          >
+            Copyright © 2026 All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+
+      <!-- SCROLL TO TOP -->
+      <button
+        class="scroll-top-btn fixed bottom-5 right-5 z-50 opacity-0 cursor-pointer"
+      >
+        <!-- progress circle -->
+        <svg class="scroll-progress w-15 h-15 -rotate-90">
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="2"
+            class="progress-bg fill-none stroke-gray-200"
+          />
+
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="4"
+            class="progress-ring fill-none stroke-primary"
+          />
+        </svg>
+
+        <!-- arrow -->
+        <div
+          class="scroll-icon absolute inset-0 flex items-center justify-center"
+        >
+          <i class="fa-solid fa-arrow-up text-sm"></i>
+        </div>
+      </button>
+    </div>
+
+    <!-- JS -->
+    <script src="./about.js"></script>
+  </body>
+</html>

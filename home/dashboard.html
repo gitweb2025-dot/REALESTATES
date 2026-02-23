@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>STACKLY | Dashboard</title>
+    <meta
+      name="description"
+      content="Access your personalized dashboard on STACKLY, your real estate platform. Manage your property listings, track inquiries, and stay updated with the latest market trends all in one place."
+    />
+    <meta
+      name="keywords"
+      content="real estate, property for sale, property for rent, buy house, sell property, real estate platform, STACKLY"
+    />
+    <meta name="author" content="STACKLY" />
+
+    <meta property="og:title" content="STACKLY | Dashboard" />
+    <meta
+      property="og:description"
+      content="Access your personalized dashboard on STACKLY, your real estate platform. Manage your property listings, track inquiries, and stay updated with the latest market trends all in one place."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="STACKLY" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Marcellus&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- J-QUERY CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- LENIS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.17/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="bg-gray-100 font-fourthery">
+    <!-- CURSOR -->
+    <div class="cursor">
+      <div class="cursor-dot"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="re-loader" class="re-loader-wrap">
+      <div class="re-loader-inner">
+        <!-- house icon -->
+        <div class="re-house">
+          <svg viewBox="0 0 100 100">
+            <path d="M10 52 L50 18 L90 52" class="roof" />
+            <rect x="22" y="52" width="56" height="30" rx="3" class="body" />
+            <rect x="45" y="62" width="10" height="20" class="door" />
+          </svg>
+        </div>
+
+        <!-- text -->
+        <div class="re-text">
+          <span>S</span>
+          <span>T</span>
+          <span>A</span>
+          <span>C</span>
+          <span>K</span>
+          <span>L</span>
+          <span>Y</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE CONTENT -->
+    <div>
+      <!-- NAVBAR -->
+      <header
+        class="fixed top-0 left-0 right-0 max-w-7xl mx-auto w-full z-40 text-sm"
+      >
+        <!-- DESKTOP NAVBAR -->
+        <nav
+          aria-label="navbar"
+          id="navbar"
+          class="bg-transparent text-black border border-white/10 shadow-inner shadow-white/20 flex items-center justify-between px-6 md:px-12 py-3 md:py-4 m-6 navbar"
+        >
+          <div>
+            <a href="./index.html"
+              ><img src="../src/assets/logo.webp" alt="logo" class="h-8"
+            /></a>
+          </div>
+          <div class="hidden lg:flex items-center gap-8">
+            <!-- HOME DROPDOWN -->
+            <div class="relative">
+              <div class="flex items-center gap-1 font-medium">
+                <a class="nav-hover" href="./index.html" class="font-medium"
+                  ><span data-text="HOME" class="">HOME</span></a
+                >
+
+                <button id="homeToggle" class="">
+                  <svg
+                    id="homeCaret"
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Dropdown -->
+              <div
+                id="homeMenu"
+                class="absolute left-0 mt-3 w-36 rounded-xl bg-white text-black backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden hidden"
+              >
+                <a
+                  href="../index.html"
+                  class="home-item block px-6 py-4 text-sm hover:bg-primary/10"
+                  >Home 1</a
+                >
+              </div>
+            </div>
+
+            <a class="nav-hover" href="./about.html"
+              ><span data-text="ABOUT">ABOUT</span></a
+            >
+            <a class="nav-hover" href="./service.html"
+              ><span data-text="SERVICES">SERVICES</span></a
+            >
+            <a class="nav-hover" href="./project.html"
+              ><span data-text="PROJECTS">PROJECTS</span></a
+            >
+            <a class="nav-hover" href="./contact.html"
+              ><span data-text="CONTACT">CONTACT</span></a
+            >
+            <a class="nav-hover text-primary" href="./dashboard.html"
+              ><span data-text="DASHBOARD">DASHBOARD</span></a
+            >
+          </div>
+          <div>
+            <a
+              href="./login.html"
+              class="font-medium hidden lg:flex items-center gap-3 bg-primary text-black px-4 py-2 rounded-full relative group overflow-hidden z-10 hover:text-primary transition-all duration-500 ease-in-out"
+            >
+              <div
+                class="absolute inset-0 z-[-1] w-0 bg-black rounded-full group-hover:w-full group-hover:h-full transition-all duration-500 ease-in-out"
+              ></div>
+              Login
+              <div>
+                <div
+                  class="bg-black text-primary rounded-full w-8 h-8 flex items-center justify-center group-hover:text-black group-hover:bg-primary transition-all duration-500 ease-in-out"
+                >
+                  <i class="fa-regular fa-circle-user"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- HAMBURGER ICON -->
+          <div class="text-2xl cursor-pointer ham-icon block lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <div
+          class="fixed inset-0 w-full h-full bg-white flex flex-col gap-12 justify-center px-12 md:px-20 z-40 transform translate-x-full transition-transform duration-1000 text-xl sm:text-3xl font-bold mobile-menu"
+        >
+          <!-- HOME with sub menu -->
+          <div class="relative">
+            <div class="flex items-center gap-2 menu-link">
+              <a href="./index.html">HOME</a>
+
+              <button id="mobileHomeToggle">
+                <i
+                  id="mobileCaret"
+                  class="fa-solid fa-chevron-down text-lg"
+                ></i>
+              </button>
+            </div>
+
+            <div
+              class="mt-4 hidden absolute bg-white rounded-lg z-40 w-40 px-6 py-6 text-2xl"
+              id="mobileHomeMenu"
+            >
+              <a class="block mobile-home-item mb-3" href="../index.html"
+                >Home 1</a
+              >
+            </div>
+          </div>
+
+          <a class="menu-link" href="./about.html">ABOUT</a>
+          <a class="menu-link" href="./service.html">SERVICES</a>
+          <a class="menu-link" href="./project.html">PROJECTS</a>
+          <a class="menu-link" href="./contact.html">CONTACT</a>
+          <a class="menu-link text-primary" href="./dashboard.html"
+            >DASHBOARD</a
+          >
+          <a class="menu-link" href="./login.html">LOGIN</a>
+          <button
+            class="close-menu text-2xl cursor-pointer absolute top-10 right-12 p-4 border border-white/20 rounded-full"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- DASHBOARD -->
+      <main
+        id="dashboard"
+        class="dashboard-root mt-32 max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-10 overflow-hidden"
+      >
+        <!-- HEADER -->
+        <div class="dash-header flex justify-between items-center">
+          <div>
+            <h1 class="text-3xl font-semibold">Real Estate Analytics</h1>
+            <p class="text-gray-500">Portfolio insights & performance</p>
+          </div>
+          <a href="./404.html" class="bg-black text-primary px-6 py-3 rounded-lg">
+            + Add Property
+          </a>
+        </div>
+
+        <!-- KPI STATS -->
+        <div class="dash-stats grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="dash-card bg-white p-6 rounded-xl shadow-sm">
+            <p class="text-gray-500">Portfolio Value</p>
+            <h3 class="text-3xl font-semibold">$12.8M</h3>
+            <p class="text-green-600 text-sm">+18%</p>
+          </div>
+
+          <div class="dash-card bg-white p-6 rounded-xl shadow-sm">
+            <p class="text-gray-500">Active Listings</p>
+            <h3 class="text-3xl font-semibold">96</h3>
+            <p class="text-green-600 text-sm">+6 this week</p>
+          </div>
+
+          <div class="dash-card bg-white p-6 rounded-xl shadow-sm">
+            <p class="text-gray-500">New Leads</p>
+            <h3 class="text-3xl font-semibold">245</h3>
+            <p class="text-red-500 text-sm">-2%</p>
+          </div>
+
+          <div class="dash-card bg-white p-6 rounded-xl shadow-sm">
+            <p class="text-gray-500">Closed Deals</p>
+            <h3 class="text-3xl font-semibold">41</h3>
+            <p class="text-green-600 text-sm">$3.2M revenue</p>
+          </div>
+        </div>
+
+        <!-- CHART -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- revenue chart -->
+          <div class="dash-card bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="font-semibold mb-6">Revenue Growth</h3>
+            <canvas id="revenueChart"></canvas>
+          </div>
+
+          <!-- property performance -->
+          <div class="dash-card bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="font-semibold mb-6">Property Performance</h3>
+            <canvas id="propertyChart"></canvas>
+          </div>
+        </div>
+
+        <!-- TABLE + ACTIVITY -->
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- property table -->
+          <div
+            class="dash-card lg:col-span-2 bg-white p-8 rounded-xl shadow-sm"
+          >
+            <h3 class="font-semibold mb-6">Recent Properties</h3>
+
+            <table class="w-full text-sm">
+              <thead class="text-gray-500 border-b border-gray-300">
+                <tr>
+                  <th class="text-left pb-3">Property</th>
+                  <th class="text-left pb-3">Location</th>
+                  <th class="text-left pb-3">Price</th>
+                  <th class="text-left pb-3">Status</th>
+                </tr>
+              </thead>
+
+              <tbody class="space-y-4">
+                <tr class="border-b border-gray-300">
+                  <td class="py-4">Modern Ocean Villa</td>
+                  <td>Malibu</td>
+                  <td>$850k</td>
+                  <td class="text-green-600">Sold</td>
+                </tr>
+
+                <tr class="border-b border-gray-300">
+                  <td class="py-4">City Penthouse</td>
+                  <td>London</td>
+                  <td>$1.4M</td>
+                  <td class="text-blue-600">Active</td>
+                </tr>
+
+                <tr>
+                  <td class="py-4">Luxury Estate</td>
+                  <td>Beverly Hills</td>
+                  <td>$3.2M</td>
+                  <td class="text-yellow-600">Pending</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- activity -->
+          <div class="dash-card bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="font-semibold mb-6">Activity Timeline</h3>
+
+            <div class="space-y-4 text-sm">
+              <p>New property listed</p>
+              <p>Client inquiry received</p>
+              <p>Contract signed</p>
+              <p>Inspection scheduled</p>
+              <p>Payment received</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- PROPERTY LISTINGS -->
+      <section class="max-w-7xl mx-auto px-4 md:px-8 py-8 overflow-hidden">
+        <div class="bg-white p-10 rounded-xl shadow-sm">
+          <div class="table-scroll overflow-x-auto">
+            <div class="min-w-250">
+              <div
+                class="grid grid-cols-12 gap-4 px-8 py-5 text-sm font-semibold border-b border-gray-300 sticky top-0 z-10"
+              >
+                <div class="col-span-2">Author</div>
+                <div class="col-span-5">Comments</div>
+                <div class="col-span-2">In Response To</div>
+                <div class="col-span-2">Submitted On</div>
+                <div class="col-span-1">Status</div>
+              </div>
+
+              <!-- ROW 1  -->
+              <div
+                class="review-row grid grid-cols-12 gap-4 px-8 py-8 border-b border-gray-300 items-start"
+              >
+                <div class="col-span-2 flex gap-4 items-center">
+                  <img
+                    src="../src/assets/men1.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full object-cover object-top"
+                  />
+                  <div>
+                    <p class="font-medium">Michael Johnson</p>
+                    <p class="text-gray-500 text-sm">Investor</p>
+                  </div>
+                </div>
+
+                <div class="col-span-5">
+                  <p class="text-gray-600 leading-relaxed">
+                    Purchased a luxury waterfront villa in Malibu. The
+                    architecture, interior design, and buying experience were
+                    exceptional. The agency handled everything professionally.
+                  </p>
+                </div>
+
+                <div class="col-span-2">
+                  <p class="font-medium">Gorgeous Villa Bay View</p>
+                  <a href="./404.html" class="text-gray-500 text-sm"
+                    >View Property</a
+                  >
+                </div>
+
+                <div class="col-span-2 text-gray-600">
+                  2025/03/24<br />03:20 PM
+                </div>
+
+                <div class="col-span-1">
+                  <span
+                    class="px-3 py-1 rounded-full text-sm bg-orange-100 text-orange-600"
+                  >
+                    Pending
+                  </span>
+                </div>
+              </div>
+
+              <!--  ROW 2  -->
+              <div
+                class="review-row grid grid-cols-12 gap-4 px-8 py-8 border-b border-gray-300 items-start"
+              >
+                <div class="col-span-2 flex gap-4 items-center">
+                  <img
+                    src="../src/assets/men2.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full object-cover object-top"
+                  />
+                  <div>
+                    <p class="font-medium">Mark Miller</p>
+                    <p class="text-gray-500 text-sm">Buyer</p>
+                  </div>
+                </div>
+
+                <div class="col-span-5">
+                  <p class="text-gray-600">
+                    Recently invested in a modern penthouse in London. Excellent
+                    valuation insights and smooth transaction process from start
+                    to finish.
+                  </p>
+                </div>
+
+                <div class="col-span-2">
+                  <p class="font-medium">London City Penthouse</p>
+                  <a href="./404.html" class="text-gray-500 text-sm"
+                    >View Property</a
+                  >
+                </div>
+
+                <div class="col-span-2 text-gray-600">
+                  2025/02/12<br />11:45 AM
+                </div>
+
+                <div class="col-span-1">
+                  <span
+                    class="px-3 py-1 rounded-full text-sm bg-green-100 text-green-600"
+                  >
+                    Completed
+                  </span>
+                </div>
+              </div>
+
+              <!--  ROW 3  -->
+              <div
+                class="review-row grid grid-cols-12 gap-4 px-8 py-8 border-b border-gray-300 items-start"
+              >
+                <div class="col-span-2 flex gap-4 items-center">
+                  <img
+                    src="../src/assets/men3.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full object-cover object-top"
+                  />
+                  <div>
+                    <p class="font-medium">James Wilson</p>
+                    <p class="text-gray-500 text-sm">Client</p>
+                  </div>
+                </div>
+
+                <div class="col-span-5">
+                  <p class="text-gray-600 mb-3">
+                    Booked a hillside estate in Beverly Hills. The team provided
+                    outstanding support, negotiation expertise, and timely
+                    updates.
+                  </p>
+                </div>
+
+                <div class="col-span-2">
+                  <p class="font-medium">Hillside Luxury Estate</p>
+                  <a href="./404.html" class="text-gray-500 text-sm"
+                    >View Property</a
+                  >
+                </div>
+
+                <div class="col-span-2 text-gray-600">
+                  2025/01/08<br />09:15 AM
+                </div>
+
+                <div class="col-span-1">
+                  <span
+                    class="px-3 py-1 rounded-full text-sm bg-orange-100 text-orange-600"
+                  >
+                    Pending
+                  </span>
+                </div>
+              </div>
+
+              <!--  ROW 4 -->
+              <div
+                class="review-row grid grid-cols-12 gap-4 px-8 py-8 items-start"
+              >
+                <div class="col-span-2 flex gap-4 items-center">
+                  <img
+                    src="../src/assets/men4.webp"
+                    alt="profile"
+                    class="w-12 h-12 rounded-full object-cover object-top"
+                  />
+                  <div>
+                    <p class="font-medium">David Lee</p>
+                    <p class="text-gray-500 text-sm">Commercial Buyer</p>
+                  </div>
+                </div>
+
+                <div class="col-span-5">
+                  <p class="text-gray-600">
+                    Acquired a commercial investment property in Dubai.
+                    Excellent ROI analysis, market research, and documentation
+                    support.
+                  </p>
+                </div>
+
+                <div class="col-span-2">
+                  <p class="font-medium">Dubai Business Tower</p>
+                  <a href="./404.html" class="text-gray-500 text-sm"
+                    >View Property</a
+                  >
+                </div>
+
+                <div class="col-span-2 text-gray-600">
+                  2024/12/21<br />04:10 PM
+                </div>
+
+                <div class="col-span-1">
+                  <span
+                    class="px-3 py-1 rounded-full text-sm bg-orange-100 text-orange-600"
+                  >
+                    Pending
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROPERTY VIEW -->
+      <section class="max-w-7xl mx-auto px-4 md:px-8 py-8 overflow-hidden">
+        <div class="listing-section bg-white rounded-3xl p-6 md:p-10 shadow-sm">
+          <div class="table-scroll overflow-x-auto">
+            <div class="min-w-237.5">
+              <!--  HEADER  -->
+              <div
+                class="listing-header grid grid-cols-12 border-b border-gray-300 rounded-lg px-8 py-4 text-sm"
+              >
+                <div class="col-span-6">TITLE</div>
+                <div class="col-span-2">DATE</div>
+                <div class="col-span-2">VIEW</div>
+                <div class="col-span-2">STATUS</div>
+              </div>
+
+              <!-- ROW -->
+              <div
+                class="list-row grid grid-cols-12 px-8 py-8 border-b border-gray-300 items-center"
+              >
+                <!-- property -->
+                <div class="col-span-6 flex gap-5 items-center">
+                  <img
+                    src="../src/assets/p1.webp"
+                    alt="property"
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+
+                  <div>
+                    <h4 class="font-semibold">Galaxy Flat</h4>
+                    <p class="text-gray-500 text-sm">Mirpur 10, Dhaka, BD</p>
+                    <p class="font-semibold">$32800</p>
+                  </div>
+                </div>
+
+                <div class="col-span-2 text-gray-500">13 Jan, 2023</div>
+                <div class="col-span-2 text-gray-500">1210</div>
+
+                <div class="col-span-2">
+                  <span
+                    class="px-4 py-2 rounded-full text-sm bg-green-100 text-green-600"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="list-row grid grid-cols-12 px-8 py-8 border-b border-gray-300 items-center"
+              >
+                <div class="col-span-6 flex gap-5 items-center">
+                  <img
+                    src="../src/assets/p2.webp"
+                    alt="property"
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+
+                  <div>
+                    <h4 class="font-semibold">White House Villa</h4>
+                    <p class="text-gray-500 text-sm">
+                      Ranchview, California, USA
+                    </p>
+                    <p class="font-semibold">$42130</p>
+                  </div>
+                </div>
+
+                <div class="col-span-2 text-gray-500">09 Jan, 2023</div>
+                <div class="col-span-2 text-gray-500">0</div>
+
+                <div class="col-span-2">
+                  <span
+                    class="px-4 py-2 rounded-full text-sm bg-red-100 text-red-500"
+                  >
+                    Pending
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="list-row grid grid-cols-12 px-8 py-8 border-b border-gray-300 items-center"
+              >
+                <div class="col-span-6 flex gap-5 items-center">
+                  <img
+                    src="../src/assets/p3.webp"
+                    alt="property"
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+
+                  <div>
+                    <h4 class="font-semibold">Luxury Villa in Dal Lake</h4>
+                    <p class="text-gray-500 text-sm">Muza Link Road, CA, USA</p>
+                    <p class="font-semibold">$2370</p>
+                  </div>
+                </div>
+
+                <div class="col-span-2 text-gray-500">17 Oct, 2022</div>
+                <div class="col-span-2 text-gray-500">0</div>
+
+                <div class="col-span-2">
+                  <span
+                    class="px-4 py-2 rounded-full text-sm bg-yellow-100 text-yellow-600"
+                  >
+                    Processing
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="list-row grid grid-cols-12 px-8 py-8 border-b border-gray-300 items-center"
+              >
+                <div class="col-span-6 flex gap-5 items-center">
+                  <img
+                    src="../src/assets/p4.webp"
+                    alt="property"
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+
+                  <div>
+                    <h4 class="font-semibold">Wooden World</h4>
+                    <p class="text-gray-500 text-sm">
+                      Board Bazar, California, USA
+                    </p>
+                    <p class="font-semibold">$63300</p>
+                  </div>
+                </div>
+
+                <div class="col-span-2 text-gray-500">23 Sep, 2022</div>
+                <div class="col-span-2 text-gray-500">970</div>
+
+                <div class="col-span-2">
+                  <span
+                    class="px-4 py-2 rounded-full text-sm bg-green-100 text-green-600"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+
+              <div class="list-row grid grid-cols-12 px-8 py-8 items-center">
+                <div class="col-span-6 flex gap-5 items-center">
+                  <img
+                    src="../src/assets/p5.webp"
+                    alt="property"
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+
+                  <div>
+                    <h4 class="font-semibold">Orkit Villa</h4>
+                    <p class="text-gray-500 text-sm">Green Road, Uttara, BD</p>
+                    <p class="font-semibold">$72000</p>
+                  </div>
+                </div>
+
+                <div class="col-span-2 text-gray-500">15 Aug, 2022</div>
+                <div class="col-span-2 text-gray-500">2320</div>
+
+                <div class="col-span-2">
+                  <span
+                    class="px-4 py-2 rounded-full text-sm bg-green-100 text-green-600"
+                  >
+                    Active
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGES -->
+      <section class="max-w-7xl mx-auto px-4 md:px-8 py-16 overflow-hidden">
+        <!-- ===== MAIN CARD ===== -->
+        <div class="msg-section bg-white rounded-[28px] p-10 md:p-14 shadow-sm">
+          <h2 class="text-2xl font-semibold mb-12">All Messages</h2>
+
+          <!-- ===== GRID ===== -->
+          <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <!-- MESSAGE -->
+            <div
+              class="msg-item flex flex-wrap gap-5 pb-10 border-b border-gray-300"
+            >
+              <img
+                src="../src/assets/men1.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="sm:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Henry Nicolas</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  We're excited to help you find your dream home! Our team has
+                  carefully curated a selection of properties that match your
+                  preferences for location, style, and budget. We understand
+                  that choosing a home is one of life's biggest decisions.
+                </p>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div
+              class="msg-item flex flex-wrap gap-5 pb-10 border-b border-gray-300"
+            >
+              <img
+                src="../src/assets/men2.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="md:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Kane Williamson</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  Thank you for your interest in our properties! I've reviewed
+                  your requirements and found several excellent matches within
+                  your budget range.
+                </p>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div
+              class="msg-item flex flex-wrap gap-5 pb-10 border-b border-gray-300"
+            >
+              <img
+                src="../src/assets/men3.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="sm:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Marting Guptil</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  I noticed you're interested in downtown properties. This
+                  neighborhood has seen significant development recently with
+                  new parks and improved transport links.
+                </p>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div
+              class="msg-item flex flex-wrap gap-5 pb-10 border-b border-gray-300"
+            >
+              <img
+                src="../src/assets/men4.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="sm:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Gleen Philips</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  Based on your recent property viewing, I've compiled
+                  additional options that match your criteria including
+                  open-concept layouts and modern features.
+                </p>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div
+              class="msg-item flex flex-wrap gap-5 pb-10 border-b md:border-b-0 border-gray-300"
+            >
+              <img
+                src="../src/assets/men5.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="sm:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Trent Boult</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  Following up on our discussion about investment properties,
+                  I've analyzed market trends and prepared a detailed rental
+                  yield report.
+                </p>
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+            <div class="msg-item flex flex-wrap gap-5">
+              <img
+                src="../src/assets/men6.webp"
+                alt="profile"
+                class="w-14 h-14 rounded-full object-cover object-top"
+              />
+
+              <div class="sm:flex-1">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Gleen Philips</h4>
+                  <span class="text-sm text-gray-500 flex items-center gap-1">
+                    <i class="fa-regular fa-calendar"></i> 3 Days Ago
+                  </span>
+                </div>
+
+                <p class="text-gray-500 leading-relaxed">
+                  I've also included detailed information about nearby schools
+                  and community facilities to help with your decision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="main-footer bg-slate-50 max-w-7xl mx-auto w-full relative pt-24 overflow-hidden text-black"
+      >
+        <!-- GRID BACKGROUND -->
+        <div
+          class="absolute inset-0 opacity-[0.06]"
+          style="background-size: 40px 40px"
+        ></div>
+
+        <div class="relative z-10 px-4 md:px-8">
+          <!-- TOP HEADER -->
+          <div
+            class="footer-header flex flex-col lg:flex-row justify-between items-start gap-12 mb-16"
+          >
+            <div class="footer-title">
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight"
+              >
+                Begin your construction
+                <span class="italic font-light">journey</span><br />
+                with trusted experts
+              </h2>
+            </div>
+
+            <div class="footer-social">
+              <p class="text-gray-500 mb-5">Explore Our Social Media</p>
+
+              <div class="flex gap-4">
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i
+                    class="fa-brands fa-pinterest-p pointer-events-none z-[-1]"
+                  ></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                  href="./404.html"
+                  class="social-circle w-11 h-11 border border-primary rounded-full flex items-center justify-center text-primary cursor-pointer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-gray-400 mb-16" />
+
+          <!-- FOOTER GRID -->
+          <div
+            class="footer-columns grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14"
+          >
+            <!-- BRAND -->
+            <div class="footer-col">
+              <div class="flex items-center gap-3 mb-6">
+                <a href="./index.html"
+                  ><img class="h-8" src="../src/assets/logo.webp" alt="logo"
+                /></a>
+              </div>
+
+              <p class="text-gray-800 leading-relaxed">
+                We are trusted builders and developers delivering modern,
+                high-quality residential and commercial construction solutions.
+              </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li><a href="./index.html" class="footer-link">Home</a></li>
+                <li><a href="./about.html" class="footer-link">About Us</a></li>
+                <li>
+                  <a href="./project.html" class="footer-link">Projects</a>
+                </li>
+                <li>
+                  <a href="./service.html" class="footer-link">Services</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="footer-link">Contact Us</a>
+                </li>
+                <li>
+                  <a href="./dashboard.html" class="footer-link">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+              <ul class="space-y-4 text-gray-800">
+                <li>
+                  <a href="./404.html" class="footer-link">Site Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Design & Planning</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Project Management</a
+                  >
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link">Building Design</a>
+                </li>
+                <li>
+                  <a href="./404.html" class="footer-link"
+                    >Interior Fit-Out Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="footer-col">
+              <h4 class="text-lg font-semibold mb-6">Subscribe Newsletter</h4>
+              <p class="text-gray-800 mb-6">
+                Subscribe to receive the latest updates, insights, and project
+                news.
+              </p>
+
+              <form id="foot-form" class="newsletter-box">
+                <div class="relative">
+                  <input
+                    id="foot-email"
+                    type="email"
+                    placeholder="Enter Your E-mail"
+                    class="w-full bg-transparent border border-gray-600 rounded-full py-4 px-6 pr-16 text-black placeholder-gray-700 outline-none"
+                  />
+
+                  <button
+                    class="news-btn absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-black w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+
+                <div class="mt-2">
+                  <p id="footError" class="text-red-500 text-sm hidden"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- COPYRIGHT -->
+          <div
+            class="footer-copy text-center text-gray-800 mt-20 py-6 border-t border-gray-400"
+          >
+            Copyright © 2026 All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+
+      <!-- SCROLL TO TOP -->
+      <button
+        class="scroll-top-btn fixed bottom-5 right-5 z-50 opacity-0 cursor-pointer"
+      >
+        <!-- progress circle -->
+        <svg class="scroll-progress w-15 h-15 -rotate-90">
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="2"
+            class="progress-bg fill-none stroke-gray-200"
+          />
+
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke-width="4"
+            class="progress-ring fill-none stroke-primary"
+          />
+        </svg>
+
+        <!-- arrow -->
+        <div
+          class="scroll-icon absolute inset-0 flex items-center justify-center"
+        >
+          <i class="fa-solid fa-arrow-up text-sm"></i>
+        </div>
+      </button>
+    </div>
+
+    <!-- JS -->
+    <script src="./dashboard.js"></script>
+  </body>
+</html>
