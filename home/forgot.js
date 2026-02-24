@@ -73,6 +73,7 @@ forgotForm.addEventListener("submit", function (e) {
 
     setTimeout(() => {
       forgotForm.reset();
+      successMsg.classList.add("hidden");
       window.location.href = "./404.html";
     }, 2000);
   }

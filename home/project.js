@@ -322,7 +322,7 @@ gsap.set(".project-label", { opacity: 0, y: 20 });
 gsap.set(".project-title", { opacity: 0, y: 80 });
 gsap.set(".project-desc", { opacity: 0, y: 40 });
 gsap.set(".project-breadcrumb", { opacity: 0, y: 30 });
-gsap.set(".project-img", { opacity: 0, x: 80 });
+gsap.set(".project-img1", { opacity: 0, x: 80 });
 gsap.set(".project-subtitle", { opacity: 0, y: 30 });
 gsap.set(".project-para", { opacity: 0, y: 30 });
 function homeAnimation() {
@@ -345,7 +345,7 @@ function homeAnimation() {
     .to(".project-title", { y: 0, opacity: 1, duration: 1 }, "-=0.3")
     .to(".project-desc", { y: 0, opacity: 1, duration: 0.8 }, "-=0.6")
     .to(".project-breadcrumb", { y: 0, opacity: 1, duration: 0.6 }, "-=0.5")
-    .to(".project-img", { x: 0, opacity: 1, duration: 1 }, "-=0.8")
+    .to(".project-img1", { x: 0, opacity: 1, duration: 1 }, "-=0.8")
     .to(".project-subtitle", { y: 0, opacity: 1, duration: 0.6 }, "-=0.5")
     .to(".project-para", { y: 0, opacity: 1, duration: 0.6 }, "-=0.5");
 }
@@ -378,6 +378,13 @@ rows.forEach((row, i) => {
     stagger: 0.2,
     delay: i * 0.2,
   });
+});
+
+// hover effect
+gsap.utils.toArray(".project-img").forEach((img) => {
+  const anim = gsap.to(img, { scale: 1.08, paused: true });
+  img.addEventListener("mouseenter", () => anim.play());
+  img.addEventListener("mouseleave", () => anim.reverse());
 });
 
 // FOOTER
