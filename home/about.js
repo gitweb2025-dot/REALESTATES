@@ -640,3 +640,6 @@ requestAnimationFrame(raf);
 
 ScrollTrigger.addEventListener("refresh", () => lenis.resize());
 ScrollTrigger.refresh();
+
+//FOOT YEAR
+document.getElementById("year").textContent = new Date().getFullYear();

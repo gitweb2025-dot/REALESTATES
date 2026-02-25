@@ -317,6 +317,7 @@ document.querySelectorAll(".nav-hover").forEach((link) => {
 // CONTENT GSAP
 gsap.set(".navbar", { opacity: 0, y: -100 });
 gsap.set(".contact-title", { opacity: 0, y: 60 });
+gsap.set(".contact-sub", { opacity: 0, y: 60 });
 gsap.set(".contact-card", { opacity: 0, y: 60 });
 gsap.set(".contact-left", { opacity: 0, y: 60 });
 gsap.set(".contact-form-wrap", { opacity: 0, y: 60 });
@@ -332,6 +333,13 @@ function runContactAnimations() {
     opacity: 1,
     y: 0,
     duration: 0.6,
+    ease: "power3.out",
+  });
+
+  gsap.to(".contact-sub", {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
     ease: "power3.out",
   });
 
@@ -580,3 +588,6 @@ requestAnimationFrame(raf);
 
 ScrollTrigger.addEventListener("refresh", () => lenis.resize());
 ScrollTrigger.refresh();
+
+//FOOT YEAR
+document.getElementById("year").textContent = new Date().getFullYear();

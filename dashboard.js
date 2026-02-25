@@ -333,18 +333,20 @@ new Chart(document.getElementById("propertyChart"), {
   },
 });
 
-//  REVENUE LINE CHART 
-new Chart(document.getElementById("revenueChart"),{
-type:"line",
-data:{
-labels:["Jan","Feb","Mar","Apr","May","Jun"],
-datasets:[{
-label:"Revenue",
-data:[200,350,500,450,700,900],
-borderWidth:2,
-tension:0.4
-}]
-}
+//  REVENUE LINE CHART
+new Chart(document.getElementById("revenueChart"), {
+  type: "line",
+  data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [
+      {
+        label: "Revenue",
+        data: [200, 350, 500, 450, 700, 900],
+        borderWidth: 2,
+        tension: 0.4,
+      },
+    ],
+  },
 });
 
 // FOOTER
@@ -476,3 +478,6 @@ requestAnimationFrame(raf);
 
 ScrollTrigger.addEventListener("refresh", () => lenis.resize());
 ScrollTrigger.refresh();
+
+//FOOT YEAR
+document.getElementById("year").textContent = new Date().getFullYear();
